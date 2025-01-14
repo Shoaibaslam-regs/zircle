@@ -1,0 +1,36 @@
+     <header>
+        <h1>Search Your Dreams Collections</h1>
+        <div class="img"><img src="/images/clipart2178626.png" alt="imageicon"></div>
+         <div><h2>ircle</h2></div>
+    </header>
+    <i class="bx bx-menu" id="menu-icon"></i>
+    <nav id="navbar">
+        <a href="/" class="nav-link" data-path="/" >Home</a>
+        <a href="/registration" class="nav-link" id="hold" data-path="">Register</a>
+        <a href="/contact" class="nav-link" data-path="/contact">Contact</a>
+
+     </nav>
+
+    <script>
+        const menuIcon = document.getElementById("menu-icon");
+        const navbar = document.getElementById("navbar");
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        menuIcon.addEventListener("click", () => {
+            navbar.classList.toggle("show");
+            });
+
+ 
+  const currentPath = window.location.pathname;  
+  navLinks.forEach(link => {
+    if (link.getAttribute("data-path") === currentPath) {
+      link.classList.add("active"); } 
+    else {
+      link.classList.remove("active");  }
+  });
+
+document.getElementById('hold').addEventListener('click', ()=>{
+  alert("page not available");
+})
+
+</script> 

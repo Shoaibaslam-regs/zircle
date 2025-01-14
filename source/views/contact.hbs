@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {{>headerlinks}}
+        <title>Contact</title>
+
+    </head>
+    <body>
+        {{>header}}
+        <section class="contact" id="contact">
+            <h2 class="heading">Contact <span>Us</span></h2>
+            <form action>
+                <div class="input-group">
+                    <div class="input-box">
+                        <input type="text" placeholder="Full Name">
+                        <input type="email" placeholder="Email">
+                    </div>
+                    <div class="input-box">
+                        <input type="number" placeholder="Number">
+                        <input type="text" placeholder="Subject">
+                    </div>
+                </div>
+
+                <div class="input-group-2">
+                    <textarea name id="text" cols="30"
+                        rows="10" placeholder="Your Message"></textarea>
+                    <input type="submit" id="submit" value="Send Message"
+                        class="btn">
+
+                    <div class="social-icon" id="speak"><a href="#contact"><i
+                                class='bx bx-volume-full'></i></a>Check
+                        Message</div>
+                    <div class="whatsapp"><a hr ef="//wa.me/03010305639"><i
+                                class='bx bxl-whatsapp'></i></a>Whatsapp</div>
+
+                </div>
+            </form>
+        </section>
+
+        {{>footer}}
+
+    </body>
+    <script>
+    const text = document.getElementById('text');
+    const speak = document.getElementById('speak');
+     
+     
+     speak.addEventListener('click', ()=>{
+        if(text.value.trim() === ""){
+            alert("Enter text in message box before clicking")
+        }
+        else{
+    
+            let synthesis = window.speechSynthesis;
+            let voice = new SpeechSynthesisUtterance(`${text.value}`);
+            synthesis.speak(voice);
+            
+        }
+    });
+    const submit  = document.getElementById('submit');
+     submit.addEventListener('click', ()=>{
+        alert("Only contact via whatsapp at this time");
+     });
+     </script>
+</html>

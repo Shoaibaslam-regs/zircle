@@ -1,0 +1,118 @@
+:root{
+    --font-H:"Rubik Wet Paint", serif;;
+    --font-text:"Josefin Sans", serif;
+    --text-2:black;
+    --text-color:#FFFFFF;
+    --main-color: #FF9F1C;
+    --bg-color :#FFBF69;
+    --main-bg:#FFB941;
+
+
+}
+.heading{
+    margin-top: 1rem;
+    display: block; 
+    font-size: 3rem;
+    text-align: center;
+}
+.heading::first-letter{
+    color: var(--main-color);
+    font-size: 5rem;
+} 
+.contact{
+    background-color: var(--text-color);
+}
+.contact h2{
+    margin-bottom: 3rem;
+    color:var(--text-2);
+}
+.contact form{
+   
+display: flex;
+justify-content: space-evenly;
+}
+
+.contact form .input-box{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+}
+.contact form .input-box input,
+.contact form textarea{
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.3rem;
+    color: var(--text-2);
+    background: rgba(227, 226, 226, 0.289);
+    border-radius: 2rem;
+    border: 2px solid var(--main-color);
+    resize: none;
+}
+.input-group{
+    position: relative;
+}
+.social-icon {
+    font-size: 1.5rem;
+    color: var(--text-2);
+    margin-top: 2rem;
+
+}  
+.social-icon a{
+    font-size: 2rem;
+    color: var(--main-color);
+    
+}
+.btn{
+    font-size: 1.2rem;
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+    border-top-left-radius: 20% ;
+    border-bottom-right-radius: 20% ;
+    background-color:var(--main-color);
+    color: var(--text-2); 
+    transition: 0.1 sec;
+}
+.btn:hover{
+    cursor: pointer;
+    transform: scale(1.02);
+}
+.whatsapp{      
+    font-size: 1.5rem;  
+    color: var(--text-2);
+    margin-top: 1.5rem;
+
+}
+.whatsapp a 
+{  
+    top: 2%;
+    font-size: 3rem;
+    color: green;
+
+}
+
+
+@media(max-width:991px){
+   html{
+    font-size: 60%;
+   }
+  
+ }
+@media(max-width:895px){
+html{
+    font-size: 60%;
+}
+
+.contact form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    margin: 5rem auto;
+    align-items: center;
+   flex-direction: column;
+}
+
+.input-group{
+    margin-top: 0%;
+} 
+}
