@@ -7,22 +7,21 @@ const app = express();
 app.use(express.static('./public'));     
 const path_second = path.join(__dirname, "./source/views");
 const partial__path = path.join(__dirname, "./source/partials");
-    
 app.set("view engine", "hbs");    
 app.set("views", path_second); 
 hbs.registerPartials(partial__path);     
          
          
  app.get("/",(req,res)=>{ 
-    res.render("index");      
+    res.render("index");        
  });           
     
- app.get("/contact",(req,res)=>{  
+ app.get("/contact",(req,res)=>{   
    res.render("contact"); 
  }); 
  app.get("/registration",(req,res)=>{ 
   res.render("index"); 
-}); 
+});   
 
  
 app.listen(port, () => {
