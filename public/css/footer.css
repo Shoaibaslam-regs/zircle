@@ -73,11 +73,7 @@ font-size: 16px;
 color: var(--text-2);
 }
 @media(max-width:991px){
-/* .footer{
-padding: 2rem, 3%;
-position: absolute;
-bottom: 0%;
-} */
+ 
 html{
     font-size: 60%;
 }
